@@ -21,12 +21,12 @@ import java.util.concurrent.TimeUnit;
 @TeleOp(name = "Drive with this one")
 public class Example_Overcommented extends LinearOpMode {
     final double DESIRED_DISTANCE = 12.0;
-    final double SPEED_GAIN = 0.02;   //  Forward Speed Control "Gain". eg: Ramp up to 50% power at a 25 inch error.   (0.50 / 25.0)
-    final double STRAFE_GAIN = 0.015;   //  Strafe Speed Control "Gain".  eg: Ramp up to 25% power at a 25 degree Yaw error.   (0.25 / 25.0)
-    final double TURN_GAIN = 0.01;   //  Turn Control "Gain".  eg: Ramp up to 25% power at a 25 degree error. (0.25 / 25.0)
+    final double SPEED_GAIN = 0.02;   //Forward Speed Control "Gain". eg: Ramp up to 50% power at a 25 inch error.   (0.50 / 25.0)
+    final double STRAFE_GAIN = 0.015;   //Strafe Speed Control "Gain".  eg: Ramp up to 25% power at a 25 degree Yaw error.   (0.25 / 25.0)
+    final double TURN_GAIN = 0.01;   //Turn Control "Gain".  eg: Ramp up to 25% power at a 25 degree error. (0.25 / 25.0)
 
-    final double MAX_AUTO_SPEED = 0.5;   //  Clip the approach speed to this max value (adjust for your robot)
-    final double MAX_AUTO_STRAFE = 0.5;   //  Clip the approach speed to this max value (adjust for your robot)
+    final double MAX_AUTO_SPEED = 0.5;   //Clip the approach speed to this max value (adjust for your robot)
+    final double MAX_AUTO_STRAFE = 0.5;   //Clip the approach speed to this max value (adjust for your robot)
     final double MAX_AUTO_TURN = 0.3;
     private static final int DESIRED_TAG_ID = -1;     // Choose the tag you want to approach or set to -1 for ANY tag.
     private static final boolean USE_WEBCAM = true;  // Set true to use a webcam, or false for a phone camera
@@ -63,14 +63,14 @@ public class Example_Overcommented extends LinearOpMode {
         //These lines get the motors from the configuration and assign them to variables and may need to
         //Be changed to fit different robots
 
-        motorFrontLeft = hardwareMap.dcMotor.get("frontRight");
+        motorFrontLeft = hardwareMap.dcMotor.get("frontRight"); //mapping all the motors
         motorFrontRight = hardwareMap.dcMotor.get("frontLeft");
         motorBackLeft = hardwareMap.dcMotor.get("backLeft");
         motorBackRight = hardwareMap.dcMotor.get("backRight");
         hang = hardwareMap.dcMotor.get("hang");
         servo = hardwareMap.get(Servo.class, "left_hand");
 
-        double FrontLeftMotorLastSpeed = 0;
+        double FrontLeftMotorLastSpeed = 0; 
         double FrontRightMotorLastSpeed = 0;
         double BackLeftMotorLastSpeed = 0;
         double BackRightMotorLastSpeed = 0;
